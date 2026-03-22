@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== COLOR SYSTEM ===== */
+:root {
+    --red-primary: #b30000;
+    --red-deep: #7a0000;
+    --gold: #f4c430;
+    --bg-light: #f7f7f9;
+    --text-dark: #1a1a1a;
+    --text-muted: #555;
+    --card-bg: rgba(255, 255, 255, 0.92);
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #fff 0%, #f4f4f6 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(90deg, var(--red-deep), var(--red-primary));
+    padding: 25px 40px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: var(--gold);
+}
+
+/* ===== MAIN SECTIONS ===== */
+main {
+    padding: 60px 20px;
+}
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== SECTION TITLES ===== */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--red-primary), var(--gold));
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ===== POEM LAYOUT ===== */
+.poem-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.poem-text {
+    flex: 2;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.poem-text p {
+    white-space: pre-line;
+}
+
+.poem-image {
+    flex: 1;
+    text-align: center;
+}
+
+.poem-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.poem-image figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ===== AUTHOR SECTION ===== */
+.author-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.authorphoto img {
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.authorinfo ul {
+    list-style: none;
+}
+
+.authorinfo li {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+/* ===== CONTACT FORM ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+input {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--red-primary);
+    box-shadow: 0 0 0 2px rgba(179, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--red-primary), var(--red-deep));
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(122, 0, 0, 0.4);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--red-deep);
+    color: white;
+    font-size: 0.9rem;
+}
